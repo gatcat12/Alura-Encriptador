@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="javascript.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content">
+        <header class="head"><img class="logo" src="images/Logo.png" alt=""></header>
+        <hr>
+        <div class="padre">
+            <div class="hijo_1">
+                <textarea class="entrada" id="entrada" placeholder="Introduce un texto:"></textarea>
+                    <p>Este programa, sólo expresa letra en minúscula</p><br>
+                <button class="enc" id="btn">Encriptar</button>
+                <button class="enc" id="des">Desencriptar</button>
+            </div>
+
+            <div class="hijo_2">
+                <img class="imagen-bloqueo" id="persona" src="images/persona.png" alt="">
+                <img class="mensaje-bloqueo" id="mensaje" src="images/mensaje.png" alt="">
+                <textarea class="salida" id="salida" placeholder="Texto encriptado:"></textarea>
+                <br>
+                <button class="btn_copy" id="btn_copy">Copiar</button>
+                <button class="btn_copy" id="limpia">Limpiar todo</button>
+            </div> 
+        </div>   
+    </div>
+    <footer><p>Proyecto ALURA desarrollado por Mauricio Moreno | 2023</p></footer>    
+    <script>
+        var boton = document.querySelector("#btn");
+        boton.onclick = encriptar;
+
+        var dese = document.querySelector("#des");
+        dese.onclick=desencriptar;
+
+        var copy = document.querySelector("#btn_copy");
+        copy.onclick=copiarTexto;
+
+        var limpia = document.querySelector("#limpia");
+        limpia.onclick=limpiar;
+
+
+</script>
+</body>
+</html>
